@@ -286,3 +286,7 @@ function clickCheck(div,ind){
 
     cerrarTooltip()
 }
+
+function clickComenzar(){
+    getE('instrucciones').className = 'instrucciones-off'
+}
