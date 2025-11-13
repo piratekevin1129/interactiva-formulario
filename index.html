@@ -9,6 +9,7 @@
     <link href="assets/css/main.css" type="text/css" rel="stylesheet" />
     <link href="assets/css/botones.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="container">
@@ -52,7 +53,7 @@
 
     <div id="instrucciones" class="instrucciones-on">
         <div id="instrucciones-box">
-            <p>Para el diligenciamiento del formulario RUES deben seguirse las siguientes instrucciones:</p>
+            <p><span>Para el diligenciamiento del formulario RUES deben seguirse las siguientes instrucciones:</span></p>
             <p>Haz clic en cualquier de las 3 opciones para que se resalten los campos y los conozcas:</p>
             <ul>
                 <li>Opcional</li>
@@ -114,16 +115,16 @@
                         opcion3_mp3 = data
                         loaderUpdate()
                     
-                        //loadTrack({src: 'assets/audios/intro.mp3', callBack: function(data){
-                            //intro_mp3 = data
+                        loadTrack({src: 'assets/audios/intro.mp3', callBack: function(data){
+                            intro_mp3 = data
 
                             //window.top.postMessage({'completado': false, 'alto': 507}, '*' );
 
                             prepareFormulario()
                             unsetLoader()
                             getE('sonido-btn').setAttribute('onclick','clickSonido()')
-                            //intro_mp3.play()
-                        //}})
+                            intro_mp3.play()
+                        }})
 
                         }})
                         }})
